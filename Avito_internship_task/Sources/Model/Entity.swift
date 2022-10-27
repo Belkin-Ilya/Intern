@@ -25,8 +25,8 @@ struct Employee: Codable {
     let skills: [String]
     
     enum CodingKeys: String, CodingKey {
-            case name
-            case phoneNumber = "phone_number"
-            case skills
+        case name
+        case phoneNumber = "phone_number"
+        case skills
     }
 }

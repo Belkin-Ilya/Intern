@@ -14,7 +14,7 @@ protocol AvitoWorkersViewDelegate: AnyObject {
 
 final class AvitoWorkersView: UIView {
     // MARK: - Public Properties
-
+    
     weak var delegate: AvitoWorkersViewDelegate?
     
     lazy var workersListTableView: AvitoWorkersTableView = {
@@ -23,7 +23,7 @@ final class AvitoWorkersView: UIView {
         tableView.customDelegate = self
         return tableView
     }()
-
+    
     lazy var loader: UIActivityIndicatorView = {
         let loader = UIActivityIndicatorView().forAutolayout
         return loader
@@ -37,7 +37,7 @@ final class AvitoWorkersView: UIView {
         setWorkersListTableViewConstraints()
         setLoaderConstraints()
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError()
     }
@@ -51,7 +51,7 @@ final class AvitoWorkersView: UIView {
             self.loader.stopAnimating()
         }
     }
-
+    
     // MARK: - Private Methods
     
     private func addSubviews() {

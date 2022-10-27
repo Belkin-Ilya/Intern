@@ -13,7 +13,7 @@ protocol AvitoWorkersTableViewDelegate: AnyObject {
 }
 
 final class AvitoWorkersTableView: UITableView {
-
+    
     // MARK: - Public Properties
     
     weak var customDelegate: AvitoWorkersTableViewDelegate?
@@ -38,7 +38,7 @@ extension AvitoWorkersTableView: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         customDelegate?.avitoWorkersTableViewNumbeOfRowsInSection(self) ?? 0
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: AvitoWorkersTableViewCell.identifier, for: indexPath) as? AvitoWorkersTableViewCell,
               let viewModel = customDelegate?.avitoWorkersTableViewCellForRowAt(self, cellForRowAt: indexPath.row)

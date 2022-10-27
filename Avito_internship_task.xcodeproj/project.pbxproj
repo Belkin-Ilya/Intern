@@ -27,8 +27,6 @@
 		E8B2525629044F2200A57166 /* AvitoWorkersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B2525529044F2200A57166 /* AvitoWorkersRepository.swift */; };
 		E8B2525929045CF200A57166 /* ViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B2525829045CF200A57166 /* ViewModels.swift */; };
 		E8B2525C2904646500A57166 /* UserDefaultsConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B2525B2904646500A57166 /* UserDefaultsConfigure.swift */; };
-		E8B557802909ADC500B7ED88 /* Metrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B5577F2909ADC500B7ED88 /* Metrics.swift */; };
-		E8B557822909AE6F00B7ED88 /* ConstantStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B557812909AE6F00B7ED88 /* ConstantStrings.swift */; };
 		E8B557842909C2BD00B7ED88 /* ConstantFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B557832909C2BD00B7ED88 /* ConstantFonts.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,8 +53,6 @@
 		E8B2525529044F2200A57166 /* AvitoWorkersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvitoWorkersRepository.swift; sourceTree = "<group>"; };
 		E8B2525829045CF200A57166 /* ViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels.swift; sourceTree = "<group>"; };
 		E8B2525B2904646500A57166 /* UserDefaultsConfigure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsConfigure.swift; sourceTree = "<group>"; };
-		E8B5577F2909ADC500B7ED88 /* Metrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metrics.swift; sourceTree = "<group>"; };
-		E8B557812909AE6F00B7ED88 /* ConstantStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantStrings.swift; sourceTree = "<group>"; };
 		E8B557832909C2BD00B7ED88 /* ConstantFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantFonts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,8 +90,6 @@
 			children = (
 				E84F3AE4290873520031B8B1 /* Fonts.swift */,
 				E8896ABC290996850065EC7F /* Helpers.swift */,
-				E8B5577F2909ADC500B7ED88 /* Metrics.swift */,
-				E8B557812909AE6F00B7ED88 /* ConstantStrings.swift */,
 				E8B557832909C2BD00B7ED88 /* ConstantFonts.swift */,
 			);
 			path = Supporting;
@@ -336,11 +330,9 @@
 				E8896ABD290996850065EC7F /* Helpers.swift in Sources */,
 				E8B557842909C2BD00B7ED88 /* ConstantFonts.swift in Sources */,
 				E89CE0F3290418A00046E597 /* AvitoWorkersPresenter.swift in Sources */,
-				E8B557802909ADC500B7ED88 /* Metrics.swift in Sources */,
 				E89CE0EA29031DAE0046E597 /* AvitoWorkersTableViewCell.swift in Sources */,
 				E8B2525929045CF200A57166 /* ViewModels.swift in Sources */,
 				E89CE0F02904185E0046E597 /* ModuleBuilder.swift in Sources */,
-				E8B557822909AE6F00B7ED88 /* ConstantStrings.swift in Sources */,
 				E81BE3272907433E00B163F5 /* AvitoWorkersTableView.swift in Sources */,
 				E89CE0C82903122B0046E597 /* AvitoWorkersViewController.swift in Sources */,
 				E81BE3242907222900B163F5 /* Mapper.swift in Sources */,

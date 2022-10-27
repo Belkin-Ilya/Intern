@@ -9,10 +9,32 @@ import UIKit
 
 final class AvitoWorkersTableViewCell: UITableViewCell {
     // MARK: - Public Propertires
-
+    
     static let identifier = "AvitoWorkersTableViewCell"
-        
+    
     // MARK: - Private Propertires
+    
+    private let namedAvatar = "avatar"
+    
+    private enum LayoutConstants {
+        enum StackView {
+            static let topAnchor: CGFloat = 10
+            static let leadingAnchor: CGFloat = 30
+            static let trailingAnchor: CGFloat = -30
+            static let bottomAnchor: CGFloat = -10
+            static let spacing: CGFloat = 10
+        }
+        
+        enum ImageView {
+            static let leadingAnchor: CGFloat = 40
+            static let heightAnchor: CGFloat = 40
+            static let widthAnchor: CGFloat = 40
+        }
+        
+        enum DescriptionLabel {
+            static let numberOfLines: Int = 0
+        }
+    }
     
     private lazy var stackView: UIStackView = {
         let stack = UIStackView(axis: .vertical, spacing: LayoutConstants.StackView.spacing, alignment: .leading).forAutolayout
@@ -21,7 +43,7 @@ final class AvitoWorkersTableViewCell: UITableViewCell {
     
     private lazy var image: UIImageView = {
         let imageView = UIImageView().forAutolayout
-        imageView.image = UIImage(named: ConstantStrings.namedAvatar)
+        imageView.image = UIImage(named: namedAvatar)
         return imageView
     }()
     
@@ -45,7 +67,7 @@ final class AvitoWorkersTableViewCell: UITableViewCell {
     }()
     
     // MARK: - Init
-        
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         selectionStyle = .none

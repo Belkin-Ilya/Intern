@@ -42,20 +42,20 @@ final class CacheStorage: CacheStorageProtocol {
     func getCacheCopy(completion: @escaping (Result<CompanyWorkers, LocalError>) -> Void) {
         if Date().timeIntervalSince(timeTracker) > experesionPeriod {
             completion(.failure(.expired))
-            print(ConstantStrings.unsuccessfullGetDataFromCache)
+            print("Try get data from cache but cache expired")
         } else {
             if let cacheWorkers = cacheWorkers {
                 completion(.success(cacheWorkers))
-                print(ConstantStrings.findDataInCache)
+                print("Found data in cache")
             } else {
                 completion(.failure(.empty))
-                print(ConstantStrings.noDataTitle)
+                print("No data in cache")
             }
         }
     }
 }
 
 extension LocalError: ErrorViewable {
-    var message: String { ConstantStrings.localErrorMessageCache }
-    var title: String { ConstantStrings.localErrorTitle }
+    var message: String { "No cached data available!" }
+    var title: String { "Ooops, an error..." }
 }

@@ -33,16 +33,16 @@ final class AvitoWorkersRepository: AvitoWorkersRepositoryProtocol {
     }
     
     // MARK: - Public Methods
-        
+    
     func fetchEmployees(completion: @escaping (Response) -> Void) {
         network.fetchData(of: CompanyWorkers.self) { [weak self] result in
             switch result {
             case .success(let workers):
-                print(ConstantStrings.successfullyData)
+                print("Successfully got data from server")
                 self?.cacheStorage.setCacheCopy(workers: workers)
                 completion(.data(data: workers, error: nil))
             case .failure(let error):
-                print(ConstantStrings.accessCache)
+                print("Network error, trying to access cache")
                 self?.cacheStorage.getCacheCopy(completion: { result in
                     switch result {
                     case .success(let workers):
@@ -54,6 +54,5 @@ final class AvitoWorkersRepository: AvitoWorkersRepositoryProtocol {
             }
         }
     }
-    
 }
 

@@ -17,7 +17,7 @@ final class AvitoWorkersViewController: UIViewController {
     // MARK: - Public Properties
     
     var presenter: AvitoWorkersPresenter?
-    private let titleString = ConstantStrings.navigationTitle
+    private let titleString = "Workers List"
     
     // MARK: - Lifecycle
     
@@ -46,18 +46,18 @@ extension AvitoWorkersViewController: AvitoWorkersProtocol {
     }
     
     func updateView() {
-            DispatchQueue.main.async { [weak self] in
-                guard let view = self?.view as? AvitoWorkersView else {
-                    return
-                }
-                view.workersListTableView.reloadData()
+        DispatchQueue.main.async { [weak self] in
+            guard let view = self?.view as? AvitoWorkersView else {
+                return
             }
+            view.workersListTableView.reloadData()
         }
+    }
     
     func presentError(error: ErrorViewable) {
         DispatchQueue.main.async { [weak self] in
             let alert = UIAlertController(title: error.title, message: error.message, preferredStyle: .alert)
-            let action = UIAlertAction(title: ConstantStrings.alertErrorTitle, style: .cancel)
+            let action = UIAlertAction(title: "Close the warning", style: .cancel)
             alert.addAction(action)
             self?.present(alert, animated: true)
         }
